@@ -6,6 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field, TypeAdapter
 
 JSONRPC_VERSION = "2.0"
 
+# 这提供了一个类型安全、符合规范的 JSON-RPC 消息处理基础，可以用于构建各种分布式系统和服务。
 
 class _MessageBase(BaseModel):
     jsonrpc: Literal["2.0"]
