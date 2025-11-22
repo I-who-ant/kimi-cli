@@ -9,6 +9,26 @@ Internal builds may append content to the Unreleased section.
 Only write entries that are worth mentioning to users.
 -->
 
+## [0.58] - 2025-11-21
+
+- Core: Fix field inheritance of agent spec files when using `extend`
+- Core: Support using MCP tools in subagents
+- Tool: Add `CreateSubagent` tool to create subagents dynamically (not enabled in default agent)
+- Tool: Use MoonshotFetch service in `FetchURL` tool for Kimi for Coding plan
+- Tool: Truncate Grep tool output to avoid exceeding token limit
+
+## [0.57] - 2025-11-20
+
+- LLM: Fix Google GenAI provider when thinking toggle is not on
+- UI: Improve approval request wordings
+- Tool: Remove `PatchFile` tool
+- Tool: Rename `Bash`/`CMD` tool to `Shell` tool
+- Tool: Move `Task` tool to `kimi_cli.tools.multiagent` module
+
+## [0.56] - 2025-11-19
+
+- LLM: Add support for Google GenAI provider
+
 ## [0.55] - 2025-11-18
 
 - Lib: Add `kimi_cli.app.enable_logging` function to enable logging when directly using `KimiCLI` class
