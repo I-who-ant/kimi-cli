@@ -116,7 +116,7 @@ class _ToolCallBlock:
         argument = extract_key_argument(self._lexer, self._tool_name)
         if argument and argument != self._argument:
             self._argument = argument
-            self._renderable: RenderableType = BulletColumns(
+            self._renderable = BulletColumns(
                 Text.from_markup(self._get_headline_markup()),
                 bullet=self._spinning_dots,
             )
@@ -213,7 +213,7 @@ class _ApprovalRequestPanel:
     def __init__(self, request: ApprovalRequest):
         self.request = request
         self.options = [
-            ("Approve", ApprovalResponse.APPROVE),
+            ("Approve once", ApprovalResponse.APPROVE),
             ("Approve for this session", ApprovalResponse.APPROVE_FOR_SESSION),
             ("Reject, tell Kimi CLI what to do instead", ApprovalResponse.REJECT),
         ]
